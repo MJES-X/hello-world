@@ -45,11 +45,14 @@ void loop()
     {
      for (int j=0;j<4;j++)
       {
-        if (characters[i]>=97&&characters[i]<=122)
+        {if (characters[i]>=97&&characters[i]<=122)
           {
             morse += char(arry[int(characters[i]-97)][j]);
           }
-          morse += ' ';
+         else
+         {continue;}
+        }
+        morse += ' ';
       }
       Serial.println(morse);
     }

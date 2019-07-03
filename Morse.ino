@@ -1,3 +1,5 @@
+#include <Morse.h>
+Morse morse(13);
 String characters=""; 
 String morse="";
 void setup() 
@@ -45,18 +47,11 @@ void loop()
     {
      for (int j=0;j<4;j++)
       {
-        {
-          if (characters[i]>=97&&characters[i]<=122)
-        
+        if (characters[i]>=97&&characters[i]<=122)
           {
             morse += char(arry[int(characters[i]-97)][j]);
           }
-         else
-          {
-            continue;
-          }
-        }
-         morse += ' ';
+          morse += ' ';
       }
       Serial.println(morse);
     }

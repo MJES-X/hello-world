@@ -1,12 +1,3 @@
-class Morse
-{
-public:
-Morse(int pin);
-void dot();
-void dash();
-private:
-int _pin;
-};
 String characters=""; 
 String morse="";
 void setup() 

@@ -1,5 +1,3 @@
-#include <Morse.h>
-Morse morse(13);
 String characters=""; 
 String morse="";
 void setup() 

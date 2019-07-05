@@ -1,39 +1,27 @@
 void setup()
 {
-  for(int i=3;i<=10;i++)
-  {
-    pinMode(i,OUTPUT);
-  }
-  for(int i=3;i<=10;i++)
+ pinMode(2,OUTPUT);
+ pinMode(3,OUTPUT);
+ pinMode(4,OUTPUT);
+ pinMode(5,OUTPUT);
+ pinMode(6,OUTPUT);
+ pinMode(7,OUTPUT);
+ pinMode(8,OUTPUT);
+}
+
+void loop() 
+{
+  for(int i=2;i<9;i++)
   {
     digitalWrite(i,HIGH);
+    delay(600);
   }
-}
-void loop()
-{
-  int num[10][7]={
-    {3,4,6,7,8,9},
-    {8,9},
-    {3,5,6,7,8},
-    {3,5,7,8,9},
-    {4,5,8,9},
-    {3,4,5,7,9},
-    {3,4,5,6,7,9},
-    {3,8,9},
-    {3,4,5,6,7,8,9},
-    {3,4,5,7,8,9}
-  };
-  for(int i=0;i<10;i++)
+  
+  for(int i=2;i<9;i++)
   {
-    for(int j=0;j<7;j++)
-    {
-      digitalWrite(num[i][j],LOW); 
-    }
-    delay(500);
-    for(int k=3;k<=9;k++)
-    {
-      digitalWrite(k,HIGH);
-    }
-    delay(500);
-  }
+    digitalWrite(i,LOW);
+    delay(600);
+  } 
+  delay(1000);
+
 }
